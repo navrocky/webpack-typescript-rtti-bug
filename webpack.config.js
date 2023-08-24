@@ -5,7 +5,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.m?js$/,
+        test: /\.(mjs|js)$/,
         resolve: {
           fullySpecified: false,
         },
@@ -16,7 +16,6 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
-                transpileOnly: true,
               compiler: "ts-patch/compiler",
             },
           },

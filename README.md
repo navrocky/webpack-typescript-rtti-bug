@@ -1,4 +1,4 @@
-# Compile bug if we use webpack with typescript-rtti
+# Runtime bug if we use webpack with typescript-rtti
 
 Getting started:
 

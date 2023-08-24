@@ -1,10 +1,22 @@
 import "reflect-metadata";
 import { reflect } from "typescript-rtti";
-import { IfaceFromModule } from "./module";
+import { IfaceFromModule, helloWorld } from "./module";
 
-interface Iface {
-    name: string
+interface LocalIface {
+  name: string;
 }
 
-const iface = reflect<IfaceFromModule>().as("interface").reflectedInterface;
-console.log(iface.propertyNames);
+helloWorld()
+
+try {
+  const localIface = reflect<LocalIface>().as("interface").reflectedInterface;
+  console.log(localIface.class.name, localIface.propertyNames);
+
+  /// if we comment out next two lines then project compiles and worked
+  const ifaceFromModule = reflect<IfaceFromModule>().as("interface").reflectedInterface;
+  console.log(ifaceFromModule.class.name, ifaceFromModule.propertyNames);
+  /// till this line
+
+} catch (e) {
+  console.error(e);
+}
