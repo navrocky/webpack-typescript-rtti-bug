@@ -1,10 +1,8 @@
-# Runtime bug if we use webpack with typescript-rtti
+# Compile and run without bug if we use webpack with typescript-rtti
 
 Getting started:
 
 ```sh
 npm i
-npm start
+npm build
 ```
-
-and we get an error: `TypeError: Type has kind any, expected interface`

@@ -16,7 +16,7 @@ module.exports = {
           {
             loader: "ts-loader",
             options: {
-              compiler: "ts-patch/compiler",
+              compiler: "ttypescript",
             },
           },
         ],
